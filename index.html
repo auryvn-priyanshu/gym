@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IronPulse Fitness</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#f4f1ec;
+  --heading:#3e2f26;
+  --accent:#a67c52;
+  --text:#5a4a42;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+h1,h2,h3{
+  font-family:'Playfair Display', serif;
+  color:var(--heading);
+}
+
+section{
+  padding:80px 10%;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+/* Navbar */
+nav{
+  position:sticky;
+  top:0;
+  background:rgba(244,241,236,0.95);
+  backdrop-filter:blur(10px);
+  padding:15px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--heading);
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:var(--accent);
+}
+
+/* Hero */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  flex-direction:column;
+}
+
+.hero h1{
+  font-size:3rem;
+  max-width:700px;
+}
+
+.hero p{
+  margin:20px 0;
+  font-size:1.1rem;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 28px;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  box-shadow:0 8px 20px rgba(166,124,82,0.3);
+  transition:0.3s ease;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(166,124,82,0.4);
+}
+
+/* About */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.about img{
+  width:100%;
+  border-radius:10px;
+}
+
+/* Services */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:12px;
+  transition:0.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Trainers */
+.trainer-card img{
+  width:100%;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+
+/* Membership */
+.pricing{
+  text-align:center;
+}
+
+.price{
+  font-size:2rem;
+  margin:15px 0;
+  color:var(--accent);
+}
+
+/* Testimonials */
+.testimonial{
+  font-style:italic;
+}
+
+/* Contact */
+form{
+  display:grid;
+  gap:15px;
+  max-width:600px;
+}
+
+input, textarea{
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:6px;
+  font-family:'Poppins';
+}
+
+input:focus, textarea:focus{
+  outline:none;
+  border-color:var(--accent);
+}
+
+iframe{
+  width:100%;
+  height:250px;
+  margin-top:30px;
+  border-radius:10px;
+  border:none;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:30px;
+  background:#e9e4dc;
+  margin-top:50px;
+}
+
+.socials{
+  margin:15px 0;
+}
+
+.socials a{
+  margin:0 10px;
+  color:var(--heading);
+  font-size:18px;
+  transition:0.3s;
+}
+
+.socials a:hover{
+  color:var(--accent);
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  nav ul{
+    gap:15px;
+    font-size:14px;
+  }
+
+  .hero h1{
+    font-size:2.2rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <h2>IronPulse</h2>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#trainers">Trainers</a></li>
+    <li><a href="#membership">Membership</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h1>Transform Your Body. Transform Your Life.</h1>
+  <p>Where strength meets discipline and results become a lifestyle.</p>
+  <a href="#membership" class="btn">Join Now</a>
+</section>
+
+<section id="about" class="about container">
+  <div>
+    <h2>About IronPulse Fitness</h2>
+    <p>IronPulse Fitness is a premium training facility designed for those who demand excellence. Our programs combine science-backed training with elite coaching to deliver real, lasting transformation.</p>
+  </div>
+  <img src="https://via.placeholder.com/500x350" alt="Gym Image">
+</section>
+
+<section id="services" class="container">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card"><h3>Personal Training</h3><p>Customized training programs tailored to your goals.</p></div>
+    <div class="card"><h3>Weight Loss Programs</h3><p>Structured plans focused on sustainable fat loss.</p></div>
+    <div class="card"><h3>Strength Training</h3><p>Build power and muscle with expert guidance.</p></div>
+    <div class="card"><h3>Cardio Fitness</h3><p>Improve endurance and heart health effectively.</p></div>
+  </div>
+</section>
+
+<section id="trainers" class="container">
+  <h2>Our Trainers</h2>
+  <div class="cards">
+    <div class="card trainer-card">
+      <img src="https://via.placeholder.com/300x250" alt="">
+      <h3>Rahul Mehta</h3>
+      <p>Strength Specialist with 10+ years experience.</p>
+    </div>
+    <div class="card trainer-card">
+      <img src="https://via.placeholder.com/300x250" alt="">
+      <h3>Priya Sharma</h3>
+      <p>Certified Nutrition & Weight Loss Coach.</p>
+    </div>
+    <div class="card trainer-card">
+      <img src="https://via.placeholder.com/300x250" alt="">
+      <h3>Arjun Kapoor</h3>
+      <p>Cardio & Functional Fitness Expert.</p>
+    </div>
+  </div>
+</section>
+
+<section id="membership" class="container">
+  <h2>Membership Plans</h2>
+  <div class="cards pricing">
+    <div class="card">
+      <h3>Basic Plan</h3>
+      <div class="price">₹1,999/month</div>
+      <p>Gym Access<br>Locker Facility<br>1 Trainer Consultation</p>
+      <a href="#contact" class="btn">Choose Plan</a>
+    </div>
+    <div class="card">
+      <h3>Pro Plan</h3>
+      <div class="price">₹3,999/month</div>
+      <p>All Basic Features<br>Personal Training<br>Diet Plan</p>
+      <a href="#contact" class="btn">Choose Plan</a>
+    </div>
+    <div class="card">
+      <h3>Elite Plan</h3>
+      <div class="price">₹6,999/month</div>
+      <p>All Pro Features<br>Unlimited Training<br>Priority Support</p>
+      <a href="#contact" class="btn">Choose Plan</a>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <h2>What Our Members Say</h2>
+  <div class="cards">
+    <div class="card testimonial">"The best decision I made for my health." – Aman</div>
+    <div class="card testimonial">"Professional trainers and amazing environment." – Sneha</div>
+    <div class="card testimonial">"Results beyond expectations." – Vikram</div>
+  </div>
+</section>
+
+<section id="contact" class="container">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="tel" id="phone" placeholder="Phone" required>
+    <textarea rows="5" id="message" placeholder="Message" required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+
+  <iframe src="https://maps.google.com/maps?q=New%20Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</section>
+
+<footer>
+  <div class="socials">
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+  </div>
+  <p>© 2026 IronPulse Fitness. All Rights Reserved.</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if(name === "" || email === "" || phone === "" || message === ""){
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+  if(!email.match(emailPattern)){
+    alert("Enter a valid email address.");
+    return;
+  }
+
+  alert("Thank you! Your message has been sent.");
+  this.reset();
+});
+</script>
+
+</body>
+</html>
